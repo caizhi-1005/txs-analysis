@@ -16,4 +16,3 @@ func (this *AddressService) WithdrawAccountList() ([]*dbModels.ResWithdrawAccoun
 	return addressList, nil
 }
 
-

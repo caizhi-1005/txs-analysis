@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/astaxie/beego"
+	"github.com/server/txs-analysis/models/nebulaModels"
 	"github.com/server/txs-analysis/service"
 )
 
@@ -10,7 +11,29 @@ type RouteInsert struct {
 	insertNebulaService service.InsertNebulaService
 }
 
-func (this *RouteInsert) InsertDataToNebula() {
+func (this *RouteInsert) InitNebula() {
+	beego.Debug("InitNebula start------------>")
+	nebulaDB := nebulaModels.Init()
+	//准备tag
+	err := nebulaModels.PrepareAddress(nebulaDB)
+	if err != nil {
+		beego.Error("nebulaModels.PrepareAddress error: ", err)
+		//this.ResponseInfo(500, "PrepareAddress error.", err)
+		//return
+	}
+	//准备edge
+	err = nebulaModels.PrepareTxs(nebulaDB)
+	if err != nil {
+		beego.Error("nebulaModels.PrepareTxs error: ", err)
+		this.ResponseInfo(500, "PrepareTxs error.", err)
+		return
+	}
+	nebulaDB.Close()
+	beego.Info("nebula prepare success")
+	this.ResponseInfo(200, "nebula prepare success succeed!", "ok")
+}
+
+func (this *RouteInsert) SyncTxDataToNebula() {
 	startBlock, err := this.GetInt("startBlock")
 	if err != nil {
 		beego.Error("input startBlock error. startBlock:", startBlock)
@@ -24,11 +47,24 @@ func (this *RouteInsert) InsertDataToNebula() {
 		return
 	}
 
-	errSync := this.insertNebulaService.SyncDataToNebula(startBlock, endBlock)
+	beego.Debug("SyncTxDataToNebula start------------>")
+	errSync := this.insertNebulaService.SyncTxDataToNebula(startBlock, endBlock)
 	if errSync != nil {
-		beego.Error("SyncDataToNebula error")
-		this.ResponseInfo(500, "SyncDataToNebula error.", errSync)
+		beego.Error("SyncTxDataToNebula error")
+		this.ResponseInfo(500, "SyncTxDataToNebula error.", errSync)
 		return
 	}
-	this.ResponseInfo(200, "insert data into nebula succeed!", "ok")
+	this.ResponseInfo(200, "SyncTxDataToNebula succeed!", "ok")
+}
+
+func (this *RouteInsert) SyncAddressDataToNebula() {
+
+	beego.Debug("SyncAddressDataToNebula start------------>")
+	errSync := this.insertNebulaService.SyncAddressDataToNebula()
+	if errSync != nil {
+		beego.Error("SyncAddressDataToNebula error")
+		this.ResponseInfo(500, "SyncAddressDataToNebula error.", errSync)
+		return
+	}
+	this.ResponseInfo(200, "SyncAddressDataToNebula succeed!", "ok")
 }
