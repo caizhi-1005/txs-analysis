@@ -1,0 +1,23 @@
+appname = txs-analysis
+httpport = 10800
+runmode = dev
+copyrequestbody = true
+
+#日志目录
+logPath = ./logs/server.log
+
+#数据库
+[mysql]
+dbuser = "root"
+dbname = "tidb_block_browser"
+dbhost = 54.72.101.87
+dbport = 50036
+#dbpassword = "bXlzcWw="
+
+
+#图数据库
+[nebula]
+dbhost = 127.0.0.1:9669
+dbspace = txs-analysis-test
+dbuser = "root"
+dbpassword = root

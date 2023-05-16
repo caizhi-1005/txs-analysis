@@ -1,0 +1,215 @@
+2023/05/15 10:44:35.068 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 10:44:35.232 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 10:45:34.440 [D] [server.go:2887]  |      127.0.0.1|[43m 404 [0m|     1.9942ms| nomatch|[44m GET     [0m /api/query/withdrawAccountList
+2023/05/15 10:45:44.460 [D] [server.go:2887]  |      127.0.0.1|[43m 404 [0m|      282.6µs| nomatch|[44m GET     [0m /api/query/withdrawAccountList
+2023/05/15 10:46:21.600 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 10:46:21.809 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 10:46:26.530 [E] [query.go:19]  get WithdrawAccountList error 
+2023/05/15 10:46:26.532 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|   1.9302395s|   match|[44m GET     [0m /api/query/withdrawAccountList   r:/api/query/withdrawAccountList
+2023/05/15 10:56:07.487 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 10:56:07.657 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 10:56:22.375 [E] [query.go:19]  get WithdrawAccountList error 
+2023/05/15 10:56:22.376 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|   7.0271858s|   match|[44m GET     [0m /api/query/withdrawAccountList   r:/api/query/withdrawAccountList
+2023/05/15 10:56:58.247 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 10:56:58.396 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 10:57:24.979 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|   1.4886303s|   match|[44m GET     [0m /api/query/withdrawAccountList   r:/api/query/withdrawAccountList
+2023/05/15 10:57:57.103 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 10:57:57.209 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 10:58:04.804 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    2.559593s|   match|[44m GET     [0m /api/query/withdrawAccountList   r:/api/query/withdrawAccountList
+2023/05/15 11:01:16.779 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:01:17.042 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:01:18.746 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|     3.9406ms|   match|[44m GET     [0m /api/query/withdrawAccountList   r:/api/query/withdrawAccountList
+2023/05/15 11:01:54.625 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:01:54.722 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:01:56.479 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|     2.6998ms|   match|[44m GET     [0m /api/query/withdrawAccountList   r:/api/query/withdrawAccountList
+2023/05/15 11:03:53.776 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|     9.3964ms|   match|[44m GET     [0m /api/query/withdrawTxListByAddress   r:/api/query/withdrawTxListByAddress
+2023/05/15 11:12:13.795 [C] [panic.go:971]  the request url is  /api/query/txListGroupByAddress
+2023/05/15 11:12:13.795 [C] [panic.go:971]  Handler crashed with error wrong object type `[]*dbModels.ShortTransaction` for rows scan, need *github.com/server/txs-analysis/models/dbModels.TbTransaction
+2023/05/15 11:12:13.795 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/panic.go:971
+2023/05/15 11:12:13.795 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/db.go:952
+2023/05/15 11:12:13.795 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/orm_queryset.go:219
+2023/05/15 11:12:13.795 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/dbModels/transaction.go:123
+2023/05/15 11:12:13.795 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/service/txService.go:30
+2023/05/15 11:12:13.795 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/controllers/query.go:51
+2023/05/15 11:12:13.796 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:476
+2023/05/15 11:12:13.796 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:337
+2023/05/15 11:12:13.796 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2023/05/15 11:12:13.796 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:2887
+2023/05/15 11:12:13.796 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:1952
+2023/05/15 11:12:13.796 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/asm_amd64.s:1371
+2023/05/15 11:12:13.798 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2023/05/15 11:13:02.744 [C] [panic.go:971]  the request url is  /api/query/txListGroupByAddress
+2023/05/15 11:13:02.744 [C] [panic.go:971]  Handler crashed with error wrong object type `[]*dbModels.ShortTransaction` for rows scan, need *github.com/server/txs-analysis/models/dbModels.TbTransaction
+2023/05/15 11:13:02.744 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/panic.go:971
+2023/05/15 11:13:02.744 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/db.go:952
+2023/05/15 11:13:02.744 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/orm_queryset.go:219
+2023/05/15 11:13:02.744 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/dbModels/transaction.go:123
+2023/05/15 11:13:02.745 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/service/txService.go:30
+2023/05/15 11:13:02.745 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/controllers/query.go:51
+2023/05/15 11:13:02.745 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:476
+2023/05/15 11:13:02.745 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:337
+2023/05/15 11:13:02.745 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2023/05/15 11:13:02.745 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:2887
+2023/05/15 11:13:02.746 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:1952
+2023/05/15 11:13:02.746 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/asm_amd64.s:1371
+2023/05/15 11:13:02.748 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2023/05/15 11:23:07.040 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:23:07.150 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:23:15.325 [C] [panic.go:971]  the request url is  /api/query/txListGroupByAddress
+2023/05/15 11:23:15.325 [C] [panic.go:971]  Handler crashed with error wrong object type `[]*dbModels.TbTransaction` for rows scan, need *github.com/server/txs-analysis/models/dbModels.TbTransaction
+2023/05/15 11:23:15.325 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/panic.go:971
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/db.go:952
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/orm_queryset.go:219
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/dbModels/transaction.go:123
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/service/txService.go:30
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/controllers/query.go:51
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:476
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:337
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:2887
+2023/05/15 11:23:15.326 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:1952
+2023/05/15 11:23:15.327 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/asm_amd64.s:1371
+2023/05/15 11:23:15.328 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2023/05/15 11:25:22.562 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:25:22.670 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:25:33.601 [C] [panic.go:971]  the request url is  /api/query/txListGroupByAddress
+2023/05/15 11:25:33.602 [C] [panic.go:971]  Handler crashed with error wrong object type `[]dbModels.TbTransaction` for rows scan, need *github.com/server/txs-analysis/models/dbModels.TbTransaction
+2023/05/15 11:25:33.605 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/panic.go:971
+2023/05/15 11:25:33.605 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/db.go:952
+2023/05/15 11:25:33.606 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/orm_queryset.go:219
+2023/05/15 11:25:33.606 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/dbModels/transaction.go:123
+2023/05/15 11:25:33.607 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/service/txService.go:30
+2023/05/15 11:25:33.607 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/controllers/query.go:51
+2023/05/15 11:25:33.608 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:476
+2023/05/15 11:25:33.608 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:337
+2023/05/15 11:25:33.609 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2023/05/15 11:25:33.610 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:2887
+2023/05/15 11:25:33.610 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:1952
+2023/05/15 11:25:33.610 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/asm_amd64.s:1371
+2023/05/15 11:25:33.611 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2023/05/15 11:26:38.056 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:26:38.212 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:26:43.515 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|   3.3024304s|   match|[44m GET     [0m /api/query/txListGroupByAddress   r:/api/query/txListGroupByAddress
+2023/05/15 11:27:18.001 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:27:18.117 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:27:26.070 [C] [panic.go:971]  the request url is  /api/query/txListGroupByAddress
+2023/05/15 11:27:26.070 [C] [panic.go:971]  Handler crashed with error wrong object type `*[]dbModels.ShortTransaction` for rows scan, need *[]*github.com/server/txs-analysis/models/dbModels.TbTransaction or *[]github.com/server/txs-analysis/models/dbModels.TbTransaction
+2023/05/15 11:27:26.070 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/panic.go:971
+2023/05/15 11:27:26.070 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/db.go:954
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/orm_queryset.go:219
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/dbModels/transaction.go:123
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/service/txService.go:30
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/controllers/query.go:51
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:476
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:337
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:2887
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:1952
+2023/05/15 11:27:26.071 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/asm_amd64.s:1371
+2023/05/15 11:27:26.073 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2023/05/15 11:44:18.813 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:44:18.922 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:44:35.692 [C] [panic.go:971]  the request url is  /api/query/txListGroupByAddress
+2023/05/15 11:44:35.693 [C] [panic.go:971]  Handler crashed with error <RawSeter.QueryRows> all args must be use ptr slice
+2023/05/15 11:44:35.693 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/panic.go:971
+2023/05/15 11:44:35.693 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/orm/orm_raw.go:433
+2023/05/15 11:44:35.693 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/dbModels/transaction.go:135
+2023/05/15 11:44:35.693 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/service/txService.go:38
+2023/05/15 11:44:35.693 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/controllers/query.go:51
+2023/05/15 11:44:35.693 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:476
+2023/05/15 11:44:35.694 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:337
+2023/05/15 11:44:35.694 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2023/05/15 11:44:35.694 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:2887
+2023/05/15 11:44:35.694 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:1952
+2023/05/15 11:44:35.694 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/asm_amd64.s:1371
+2023/05/15 11:44:35.697 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2023/05/15 11:45:22.450 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:45:22.546 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:46:02.267 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|   2.3249255s|   match|[44m GET     [0m /api/query/txListGroupByAddress   r:/api/query/txListGroupByAddress
+2023/05/15 11:50:42.618 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:50:42.726 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:50:56.256 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|   5.5127479s|   match|[44m GET     [0m /api/query/txListGroupByAddress   r:/api/query/txListGroupByAddress
+2023/05/15 11:51:55.416 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:51:55.530 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:51:58.891 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|    15.4409ms|   match|[44m GET     [0m /api/query/txListGroupByAddress   r:/api/query/txListGroupByAddress
+2023/05/15 11:53:52.777 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:53:52.902 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:53:59.070 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|   1.6815636s|   match|[44m GET     [0m /api/query/txListGroupByAddress   r:/api/query/txListGroupByAddress
+2023/05/15 11:54:55.887 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 11:54:55.994 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 11:55:33.325 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|  22.2947909s|   match|[44m GET     [0m /api/query/txListGroupByAddress   r:/api/query/txListGroupByAddress
+2023/05/15 14:40:42.894 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 14:40:43.123 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 14:40:54.932 [D] [insert.go:15]  InitNebula start------------> 
+2023/05/15 14:40:57.941 [C] [panic.go:971]  the request url is  /api/insert/init
+2023/05/15 14:40:57.941 [C] [panic.go:971]  Handler crashed with error connect nebula fail: failed to open connection, error: failed to open transport, error: dial tcp 54.238.12.75:9669: i/o timeout 
+2023/05/15 14:40:57.941 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/panic.go:971
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/norm/dialectors/nebula.go:58
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/nebulaModels/base.go:34
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/nebulaModels/base.go:49
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/sync/once.go:68
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/sync/once.go:59
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/nebulaModels/base.go:48
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/controllers/insert.go:16
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:476
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:337
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:2887
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:1952
+2023/05/15 14:40:57.942 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/asm_amd64.s:1371
+2023/05/15 14:40:57.943 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2023/05/15 14:41:16.609 [D] [insert.go:15]  InitNebula start------------> 
+2023/05/15 14:41:19.622 [C] [panic.go:971]  the request url is  /api/insert/init
+2023/05/15 14:41:19.623 [C] [panic.go:971]  Handler crashed with error connect nebula fail: failed to open connection, error: failed to open transport, error: dial tcp 54.238.12.75:9669: i/o timeout 
+2023/05/15 14:41:19.623 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/panic.go:971
+2023/05/15 14:41:19.623 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/norm/dialectors/nebula.go:58
+2023/05/15 14:41:19.623 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/nebulaModels/base.go:34
+2023/05/15 14:41:19.623 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/nebulaModels/base.go:49
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/sync/once.go:68
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/sync/once.go:59
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/nebulaModels/base.go:48
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/controllers/insert.go:16
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:476
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:337
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:2887
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:1952
+2023/05/15 14:41:19.624 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/asm_amd64.s:1371
+2023/05/15 14:41:19.635 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2023/05/15 14:41:25.580 [D] [insert.go:15]  InitNebula start------------> 
+2023/05/15 14:41:28.584 [C] [panic.go:971]  the request url is  /api/insert/init
+2023/05/15 14:41:28.584 [C] [panic.go:971]  Handler crashed with error connect nebula fail: failed to open connection, error: failed to open transport, error: dial tcp 54.238.12.75:9669: i/o timeout 
+2023/05/15 14:41:28.584 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/panic.go:971
+2023/05/15 14:41:28.584 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/norm/dialectors/nebula.go:58
+2023/05/15 14:41:28.584 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/nebulaModels/base.go:34
+2023/05/15 14:41:28.584 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/nebulaModels/base.go:49
+2023/05/15 14:41:28.584 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/sync/once.go:68
+2023/05/15 14:41:28.584 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/sync/once.go:59
+2023/05/15 14:41:28.584 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/models/nebulaModels/base.go:48
+2023/05/15 14:41:28.585 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/wuban/gitlab/txs-analysis/controllers/insert.go:16
+2023/05/15 14:41:28.585 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:476
+2023/05/15 14:41:28.585 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/reflect/value.go:337
+2023/05/15 14:41:28.585 [C] [panic.go:971]  D:/DevSoftWare/WorkSpaces/GoWorkspace/pkg/mod/github.com/astaxie/beego@v1.12.3/router.go:897
+2023/05/15 14:41:28.585 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:2887
+2023/05/15 14:41:28.585 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/net/http/server.go:1952
+2023/05/15 14:41:28.585 [C] [panic.go:971]  D:/DevSoftWare/Go-1.16/src/runtime/asm_amd64.s:1371
+2023/05/15 14:41:28.585 [server.go:3137]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2023/05/15 14:42:30.829 [I] [main.go:14]  txs-analysis started! 
+2023/05/15 14:42:30.944 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/15 14:42:33.872 [D] [insert.go:15]  InitNebula start------------> 
+2023/05/15 14:42:39.466 [E] [insert.go:20]  nebulaModels.PrepareAddress error:  code: -1005, msg: Existed! 
+2023/05/15 14:42:50.392 [I] [insert.go:32]  nebula prepare success 
+2023/05/15 14:42:50.393 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|  16.5210779s|   match|[44m GET     [0m /api/insert/init   r:/api/insert/init
+2023/05/15 14:43:01.136 [D] [insert.go:50]  SyncTxDataToNebula start------------> 
+2023/05/15 14:43:12.711 [I] [transaction.go:43]  InsertTxn success! txHash: 0x765c0110ed4f2ac090b644ed7c0b1423c8e0dca945baa47d1cd06de940ce90f6 
+2023/05/15 14:43:23.620 [I] [transaction.go:43]  InsertTxn success! txHash: 0x7e313c04a680b18d46064195edc4b15f33d689a382230c2d7f806c8a3326abaf 
+2023/05/15 14:43:40.386 [I] [transaction.go:43]  InsertTxn success! txHash: 0xcaf81db29c6c0333bc4e20b9fe8aba7839eefef147c7dd224feb2828be00128d 
+2023/05/15 14:43:50.960 [I] [transaction.go:43]  InsertTxn success! txHash: 0xcb2a2ea1fd8dad3c446daec4c8e6b2afd33be9e097d706b2290d2be4741c486e 
+2023/05/15 14:44:07.576 [I] [transaction.go:43]  InsertTxn success! txHash: 0x95f8ff12893a4d504192c60a358eac3baafa74190e59970bfe933884bf0585de 
+2023/05/15 14:44:24.586 [I] [transaction.go:43]  InsertTxn success! txHash: 0x337f5cb41b9beb3a646d9b239869ae775329fde0ceffba1ef0464cf29dcfeca7 
+2023/05/15 14:44:24.586 [D] [server.go:2887]  |      127.0.0.1|[42m 200 [0m|1m23.4508086s|   match|[44m GET     [0m /api/insert/txs   r:/api/insert/txs
+2023/05/16 10:53:28.120 [I] [main.go:14]  txs-analysis started! 
+2023/05/16 10:53:28.211 [I] [asm_amd64.s:1371]  http server Running on http://:10800
+2023/05/16 10:57:22.392 [D] [insert.go:50]  SyncTxDataToNebula start------------> 
+2023/05/16 11:16:09.087 [I] [main.go:14]  txs-analysis started! 
+2023/05/16 11:16:09.190 [I] [asm_amd64.s:1371]  http server Running on http://:10800
