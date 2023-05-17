@@ -31,12 +31,11 @@ type TbTransaction struct {
 }
 
 type ResTransaction struct {
-	TxHash          string    `json:"tx_hash"`
-	TxTime          time.Time `json:"tx_time"`
-	ContractAddress string    `json:"contract_address"`
-	From            string    `json:"from"`
-	To              string    `json:"to"`
-	Amount          string    `json:"amount"`
+	TxHash string    `json:"tx_hash"`
+	TxTime time.Time `json:"tx_time"`
+	From   string    `json:"from"`
+	To     string    `json:"to"`
+	Amount string    `json:"amount"`
 }
 
 type ShortTransaction struct {
